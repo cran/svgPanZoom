@@ -1,0 +1,11 @@
+c36f200a077d880c19dea2ff38287ba4 *DESCRIPTION
+7a378f976c50aa1b96190691c589a2ba *LICENSE
+8cf2f11c8e576649b4bd4ec2399b2d4b *NAMESPACE
+1207c4b2df88ef151dcb7bbfc577fe4e *NEWS
+201a79fa9fc00a70aebe77717b04f8cc *R/svgPanZoom.R
+e9c72955e0d5775bccc26d746c73a7b8 *inst/htmlwidgets/lib/svg-pan-zoom/LICENSE_svg-pan-zoom
+ef861fda359f17d65c999ab06444a4f1 *inst/htmlwidgets/lib/svg-pan-zoom/dist/svg-pan-zoom.min.js
+6c7f94b00258639d12e8074cbe7a0563 *inst/htmlwidgets/svgPanZoom.js
+e0dfba3dccfaa0b5e5db3d019b5d07c7 *inst/htmlwidgets/svgPanZoom.yaml
+2474aeaa24602ac5cf767f3961f36edc *man/svgPanZoom-shiny.Rd
+5551041af4ee22ded4d24f1a275a96da *man/svgPanZoom.Rd
