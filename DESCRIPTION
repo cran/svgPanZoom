@@ -1,11 +1,16 @@
 Package: svgPanZoom
 Title: R 'Htmlwidget' to Add Pan and Zoom to Almost any R Graphic
-Version: 0.2.0
+Version: 0.3.0
 Authors@R: c(
               person(
                 "Anders", "Riutta et. al.", role = c("aut", "cph"),
                 comment = "svg-pan-zoom.js BSD-licensed library in htmlwidgets/lib,
                 https://github.com/ariutta/svg-pan-zoom"
+              ),
+              person(
+                "Jorik", "Tangelder", role = c("aut", "cph"),
+                comment = "hammer.js MIT-licensed touch library in htmlwidgets/lib,
+                https://github.com/hammerjs/hammer"
               ),
               person(
                 "Kent", "Russell", role = c("aut", "cre"),
@@ -24,11 +29,14 @@ BugReports: https://github.com/timelyportfolio/svgPanZoom/issues
 License: MIT + file LICENSE
 Depends: R (>= 3.1.2)
 Imports: htmlwidgets (>= 0.3.2)
-Suggests: gridSVG, htmltools, knitr, SVGAnnotation, XML
-Packaged: 2015-07-15 16:05:40 UTC; kent
+Suggests: gridSVG, htmltools, knitr, SVGAnnotation, XML, xml2
+Additional_repositories: http://www.omegahat.org/R/
+NeedsCompilation: no
+Packaged: 2015-09-11 16:32:45 UTC; Kent
 Author: Anders Riutta et. al. [aut, cph] (svg-pan-zoom.js BSD-licensed library
     in htmlwidgets/lib, https://github.com/ariutta/svg-pan-zoom),
+  Jorik Tangelder [aut, cph] (hammer.js MIT-licensed touch library in
+    htmlwidgets/lib, https://github.com/hammerjs/hammer),
   Kent Russell [aut, cre] (R interface to svg-pan-zoom.js)
-NeedsCompilation: no
 Repository: CRAN
-Date/Publication: 2015-07-16 14:24:41
+Date/Publication: 2015-09-11 18:53:05
