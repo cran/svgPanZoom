@@ -6,11 +6,14 @@
 #'
 #' @param svg one of
 #' \itemize{
-#'   \item svg - SVG as XML or xml2, such as return from \code{\link[SVGAnnotation]{svgPlot}}
+#'   \item svg - SVG as XML or xml2, such as return from \code{\link[svglite]{xmlSVG}}
 #'   \item lattice plot - trellis object, such as \code{l} in \code{l=xyplot(...)}
 #'   \item ggplot2 plot - ggplot object, such as \code{g} in \code{g=ggplot(...) + geom_line()}
 #'   \item filename or connection of a SVG file
 #' }
+#' @param viewBox \code{logical} to add back the viewBox to the SVG.
+#'           The default is \code{TRUE} to fit the svgPanZoom in its
+#'           container.
 #' @param ... other configuration options for svg-pan-zoom.js.
 #'           See \href{https://github.com/ariutta/svg-pan-zoom#how-to-use}{svg-pan-zoom How To Use}
 #'           for a full description of the options available.  As an example to turn on
@@ -39,11 +42,12 @@
 #' library(svgPanZoom)
 #'
 #' # first let's demonstrate a base plot
-#' # use svgPlot for now
-#' library(SVGAnnotation)
-#' svgPanZoom( svgPlot( plot(1:10) ) )
+#' # use svglite for now
+#' library(svglite)
+#' library(lattice)
+#' svgPanZoom( svglite:::inlineSVG( plot(1:10) ) )
 #'
-#' svgPanZoom( svgPlot(show( xyplot( y~x, data.frame(x=1:10,y=1:10) ) ) )
+#' svgPanZoom(svglite:::inlineSVG(show( xyplot( y~x, data.frame(x=1:10,y=1:10) ) )))
 #'
 #' # the package gridSVG is highly recommended for lattice and ggplot2
 #' # second let's demonstrate a lattice plot
@@ -56,7 +60,7 @@
 #'
 #' #Of course as a good htmlwidget should, it works with Shiny also.
 #' library(shiny)
-#' library(SVGAnnotation)
+#' library(svglite)
 #' library(svgPanZoom)
 #' library(ggplot2)
 #'
@@ -84,7 +88,7 @@
 #' }
 #'
 #' @export
-svgPanZoom <- function(svg, ... , width = NULL, height = NULL, elementId = NULL) {
+svgPanZoom <- function(svg, viewBox = TRUE, ... , width = NULL, height = NULL, elementId = NULL) {
 
   # check to see if trellis for lattice or ggplot
   if(inherits(svg,c("trellis","ggplot","ggmultiplot"))){
@@ -93,13 +97,13 @@ svgPanZoom <- function(svg, ... , width = NULL, height = NULL, elementId = NULL)
     if (requireNamespace("gridSVG", quietly = TRUE)) {
       print(svg)
       svg = gridSVG::grid.export(name=NULL)$svg
-    } else {  #use SVGAnnotation
-      if(requireNamespace("SVGAnnotation", quietly = TRUE)){
+    } else {  #use svglite
+      if(requireNamespace("svglite", quietly = TRUE)){
         warning("for best results with ggplot2 and lattice, please install gridSVG")
-        svg = SVGAnnotation::svgPlot(svg, addInfo = F)
+        svg = svglite::xmlSVG(svg)
       } else { # if
         stop(
-          "SVGAnnotation or gridSVG required with lattice or trellis objects",
+          "svglite or gridSVG required with lattice or trellis objects",
            call. = FALSE
         )
       }
@@ -130,6 +134,9 @@ svgPanZoom <- function(svg, ... , width = NULL, height = NULL, elementId = NULL)
   x = list(
     svg = svg
     ,config = list(...)
+    ,options = list(
+      viewBox = viewBox
+    )
   )
 
   # create widget

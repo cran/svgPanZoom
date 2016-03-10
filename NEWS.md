@@ -1,3 +1,14 @@
+svgPanZoom 0.3.2
+------------------------------------------------------------------------
+
+* remove `SVGAnnotation` in examples in favor of `svglite`
+* Upgrade to svg-pan-zoom.js v3.2.6
+
+svgPanZoom 0.3.1
+------------------------------------------------------------------------
+
+* Add viewBox argument to disable "smart" viewBox
+
 svgPanZoom 0.3
 ------------------------------------------------------------------------
 
