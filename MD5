@@ -1,14 +1,14 @@
-5006f5d7bfad3be20065a194a453823c *DESCRIPTION
+cbf6c7a1ad907eb88beea255b869432e *DESCRIPTION
 f6d5aa94ec98d88641b0cf161522bb51 *LICENSE
 011c07a171a5cff72565605ca2784a30 *NAMESPACE
-bed98130d9a215f4da917f5721b02940 *NEWS.md
+8527000bb02927f0ddce9313c25d80b2 *NEWS.md
 d1e2631f59e52d5dc062a3516a8b07d9 *R/svgPanZoom.R
 42e4a60fe0717cace55837c9fa0b945f *inst/htmlwidgets/lib/hammer/LICENSE.md
 d22d7500ab7c72da9195c571002c2495 *inst/htmlwidgets/lib/hammer/hammer.min.js
 083ad5945da51f4f3f523269682ae3a1 *inst/htmlwidgets/lib/svg-pan-zoom/LICENSE_svg-pan-zoom
 da55a388e819a58b6b87004a8e11d7f2 *inst/htmlwidgets/lib/svg-pan-zoom/dist/svg-pan-zoom.js
 2f5400e94f4d1b19e763597531a7ccc1 *inst/htmlwidgets/lib/svg-pan-zoom/dist/svg-pan-zoom.min.js
-c30d42468a74759acfb69f8b0ffb70cc *inst/htmlwidgets/svgPanZoom.js
+5848b636e3ea71d8f01f2c99e79ebe17 *inst/htmlwidgets/svgPanZoom.js
 a76530862fca941ff8af201840369068 *inst/htmlwidgets/svgPanZoom.yaml
 703e316b6d1a0fd1ea1d69cebd0e7ac5 *man/svgPanZoom-shiny.Rd
 300bcae7f705aa395736289647b9e580 *man/svgPanZoom.Rd
