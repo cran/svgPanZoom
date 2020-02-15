@@ -1,6 +1,7 @@
 Package: svgPanZoom
 Title: R 'Htmlwidget' to Add Pan and Zoom to Almost any R Graphic
-Version: 0.3.3
+Version: 0.3.4
+Date: 2020-02-15
 Authors@R: c(
               person(
                 "Anders", "Riutta et. al.", role = c("aut", "cph"),
@@ -30,13 +31,13 @@ Depends: R (>= 3.1.2)
 Imports: htmlwidgets (>= 0.3.2)
 Suggests: htmltools, svglite
 Enhances: gridSVG, knitr, XML, xml2
-RoxygenNote: 5.0.1
+RoxygenNote: 7.0.2
 NeedsCompilation: no
-Packaged: 2016-09-26 18:38:43 UTC; Kent
+Packaged: 2020-02-15 14:12:31 UTC; kentr
 Author: Anders Riutta et. al. [aut, cph] (svg-pan-zoom.js BSD-licensed library
     in htmlwidgets/lib, https://github.com/ariutta/svg-pan-zoom),
   Jorik Tangelder [aut, cph] (hammer.js MIT-licensed touch library in
     htmlwidgets/lib, https://github.com/hammerjs/hammer),
   Kent Russell [aut, cre] (R interface to svg-pan-zoom.js)
 Repository: CRAN
-Date/Publication: 2016-09-26 21:27:03
+Date/Publication: 2020-02-15 21:20:02 UTC
